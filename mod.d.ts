@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,17 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var isndarrayLike = require( '@stdlib/assert-is-ndarray-like' );
-var base = require( '@stdlib/ndarray-base-transpose' );
-var ndims = require( '@stdlib/ndarray-base-ndims' );
-var format = require( '@stdlib/error-tools-fmtprodmsg' );
-
-
-// MAIN //
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Returns a read-only view of an input ndarray in which the last two dimensions are transposed.
@@ -36,10 +30,8 @@ var format = require( '@stdlib/error-tools-fmtprodmsg' );
 * -   The function operates on a stack of matrices, transposing the last two dimensions of the input ndarray.
 * -   The input ndarray must have at least two dimensions.
 *
-* @param {ndarray} x - input array
-* @throws {TypeError} must provide an ndarray
-* @throws {RangeError} must provide an ndarray having two or more dimensions
-* @returns {ndarray} ndarray view
+* @param x - input array
+* @returns output array
 *
 * @example
 * var array = require( '@stdlib/ndarray-array' );
@@ -50,17 +42,9 @@ var format = require( '@stdlib/error-tools-fmtprodmsg' );
 * var y = transpose( x );
 * // returns <ndarray>[ [ 1.0, 4.0 ], [ 2.0, 5.0 ], [ 3.0, 6.0 ] ]
 */
-function transpose( x ) {
-	if ( !isndarrayLike( x ) ) {
-		throw new TypeError( format( 'nullDv', x ) );
-	}
-	if ( ndims( x ) < 2 ) {
-		throw new RangeError( format( 'invalid argument. Must provide an ndarray having two or more dimensions. Number of dimensions: `%u`.', ndims( x ) ) );
-	}
-	return base( x, false );
-}
+declare function transpose<T extends ndarray = ndarray>( x: T ): T;
 
 
 // EXPORTS //
 
-module.exports = transpose;
+export = transpose;
