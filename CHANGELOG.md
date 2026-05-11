@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`25ae5aa`](https://github.com/stdlib-js/stdlib/commit/25ae5aa59b431b6b562e4fe36b69b3186111af12) - **refactor:** update error message _(by Athan Reines)_
 -   [`5c1463c`](https://github.com/stdlib-js/stdlib/commit/5c1463c8c0240b44991231d5b8b120d78c6d8ad1) - **feat:** add `ndarray/transpose` [(#12030)](https://github.com/stdlib-js/stdlib/pull/12030) _(by Muhammad Haris, Athan Reines)_
 
 </details>
