@@ -1,4 +1,0 @@
-// Copyright (c) 2026 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
-/// <reference types="./index.d.ts" />
-import r from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-ndarray-like@v0.2.3-esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-transpose@v0.2.4-esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ndims@v0.2.3-esm/index.mjs";import n from"https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@v0.2.3-esm/index.mjs";function t(t){if(!r(t))throw new TypeError(n("nullDv",t));if(e(t)<2)throw new RangeError(n("invalid argument. Must provide an ndarray having two or more dimensions. Number of dimensions: `%u`.",e(t)));return s(t,!1)}export{t as default};
-//# sourceMappingURL=index.mjs.map
